@@ -6,6 +6,7 @@
 var lastNameList;
 var userLastName;
 var yourNameIndex;
+var content;
 
 // array di cognomi
 lastNameList = [
@@ -38,6 +39,13 @@ for (var i = 0; i < lastNameList.length; i++) {
     if (userLastName == lastNameList[i]) {
         yourNameIndex = i + 1;
     }
+
+    content = document.getElementById('list').innerHTML;
+
+    document.getElementById('list').innerHTML = content + "<li>" + lastNameList[i] + "</li>";
+
 }
 
-console.log("Il tuo cognome è il numero "+ yourNameIndex + " della lista");
+document.getElementById('index').innerHTML = "Il tuo cognome è il numero " + yourNameIndex + " della lista"
+
+console.log ("Il tuo cognome è il numero " + yourNameIndex + " della lista");
