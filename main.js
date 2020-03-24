@@ -40,12 +40,11 @@ for (var i = 0; i < lastNameList.length; i++) {
         yourNameIndex = i + 1;
     }
 
-    content = document.getElementById('list').innerHTML;
-
-    document.getElementById('list').innerHTML = content + "<li>" + lastNameList[i] + "</li>";
+    document.getElementById('list').innerHTML += "<li>" + lastNameList[i] + "</li>";
 
 }
 
-document.getElementById('index').innerHTML = "Il tuo cognome è il numero " + yourNameIndex + " della lista"
+// stampa della posizione del cognome iniettato nell'array
+document.getElementById('index').innerHTML = "Il tuo cognome è il numero " + yourNameIndex + " della lista";
 
 console.log ("Il tuo cognome è il numero " + yourNameIndex + " della lista");
